@@ -66,6 +66,7 @@ def main():
         repo = CurrencyRepo(
             url="https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml"
         )
+        print("Loading currencies...")
         currencyData = repo.getCurrencies()
         printAvailableCurrencies(list(currencyData.keys()))
         amount = getUserAmount()
